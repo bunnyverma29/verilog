@@ -14,14 +14,14 @@ begin
 assign sum_temp=x+y+cin;
 if(sum_temp > 9)     
    begin
-	assign sum_temp=sum_temp + 6;
-	assign cout=1;
-	assign sum=sum_temp[3:0];
+	 sum_temp=sum_temp + 6;
+	 cout=1;
+	 sum=sum_temp[3:0];
 	end
 else   
      begin
-	  assign cout=0;
-	  assign sum=sum_temp[3:0];
+	   cout=0;
+	   sum=sum_temp[3:0];
 end
 
 end
