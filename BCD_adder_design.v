@@ -18,11 +18,11 @@ if(sum_temp > 9)
 	 cout=1;
 	 sum=sum_temp[3:0];
 	end
-else   
+  else   
      begin
 	   cout=0;
 	   sum=sum_temp[3:0];
-end
+     end
 
-end
+  end
 endmodule
