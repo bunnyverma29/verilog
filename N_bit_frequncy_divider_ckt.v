@@ -1,5 +1,5 @@
   ========================================= DESIGN BY DIPESH =============================================
-  
+  EDA Playround link :  https://www.edaplayground.com/x/hQkk
   
   module sys (clk,rst,clkout);
   input clk,rst;
