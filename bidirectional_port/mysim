@@ -1,0 +1,77 @@
+#! /c/Source/iverilog-install/bin/vvp
+:ivl_version "12.0 (devel)" "(s20150603-1110-g18392a46)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "C:\iverilog\lib\ivl\system.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_sys.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_textio.vpi";
+:vpi_module "C:\iverilog\lib\ivl\v2005_math.vpi";
+:vpi_module "C:\iverilog\lib\ivl\va_math.vpi";
+S_0000022fa6999420 .scope module, "bothside_tb_in" "bothside_tb_in" 2 3;
+ .timescale 0 0;
+o0000022fa68670c8 .functor BUFZ 1, C4<z>; HiZ drive
+; Elide local net with no drivers, v0000022fa68657d0_0 name=_ivl_0
+o0000022fa68670f8 .functor BUFZ 1, C4<z>; HiZ drive
+; Elide local net with no drivers, v0000022fa6865870_0 name=_ivl_4
+v0000022fa6865910_0 .var "a", 0 0;
+v0000022fa68659b0_0 .var "b", 0 0;
+v0000022fa699b710_0 .var "control", 0 0;
+v0000022fa699b7b0_0 .var/i "i", 31 0;
+RS_0000022fa6866fd8 .resolv tri, L_0000022fa6832d80, L_0000022fa68638e0;
+v0000022fa699b850_0 .net8 "in", 0 0, RS_0000022fa6866fd8;  2 drivers, strength-aware
+RS_0000022fa6867008 .resolv tri, L_0000022fa6833040, L_0000022fa6863fc0;
+v0000022fa699b8f0_0 .net8 "out", 0 0, RS_0000022fa6867008;  2 drivers, strength-aware
+L_0000022fa68638e0 .functor MUXZ 1, o0000022fa68670c8, v0000022fa6865910_0, v0000022fa699b710_0, C4<>;
+L_0000022fa6863fc0 .functor MUXZ 1, v0000022fa68659b0_0, o0000022fa68670f8, v0000022fa699b710_0, C4<>;
+S_0000022fa68655a0 .scope module, "dut" "bothside" 2 9, 3 1 0, S_0000022fa6999420;
+ .timescale 0 0;
+    .port_info 0 /INOUT 1 "in";
+    .port_info 1 /INOUT 1 "out";
+    .port_info 2 /INPUT 1 "control";
+L_0000022fa6833040 .functor BUFIF1 1, RS_0000022fa6866fd8, v0000022fa699b710_0, C4<0>, C4<0>;
+L_0000022fa6832d80 .functor BUFIF0 1, RS_0000022fa6867008, v0000022fa699b710_0, C4<0>, C4<0>;
+v0000022fa699a150_0 .net "control", 0 0, v0000022fa699b710_0;  1 drivers
+v0000022fa6832950_0 .net8 "in", 0 0, RS_0000022fa6866fd8;  alias, 2 drivers, strength-aware
+v0000022fa6865730_0 .net8 "out", 0 0, RS_0000022fa6867008;  alias, 2 drivers, strength-aware
+    .scope S_0000022fa6999420;
+T_0 ;
+    %pushi/vec4 0, 0, 32;
+    %store/vec4 v0000022fa699b7b0_0, 0, 32;
+    %end;
+    .thread T_0;
+    .scope S_0000022fa6999420;
+T_1 ;
+    %vpi_call 2 15 "$dumpfile", "file.vcd" {0 0 0};
+    %vpi_call 2 16 "$dumpvars", 32'sb00000000000000000000000000000000 {0 0 0};
+    %delay 10, 0;
+T_1.0 ;
+    %load/vec4 v0000022fa699b7b0_0;
+    %cmpi/s 8, 0, 32;
+    %jmp/0xz T_1.1, 5;
+    %load/vec4 v0000022fa699b7b0_0;
+    %pad/s 3;
+    %split/vec4 1;
+    %store/vec4 v0000022fa68659b0_0, 0, 1;
+    %split/vec4 1;
+    %store/vec4 v0000022fa6865910_0, 0, 1;
+    %store/vec4 v0000022fa699b710_0, 0, 1;
+    %delay 5, 0;
+    %load/vec4 v0000022fa699b7b0_0;
+    %addi 1, 0, 32;
+    %store/vec4 v0000022fa699b7b0_0, 0, 32;
+    %vpi_call 2 23 "$display", "For control %b , in= %b   ,out= %b", v0000022fa699b710_0, v0000022fa699b850_0, v0000022fa699b8f0_0 {0 0 0};
+    %load/vec4 v0000022fa699b7b0_0;
+    %cmpi/e 7, 0, 32;
+    %jmp/0xz  T_1.2, 4;
+    %vpi_call 2 24 "$finish" {0 0 0};
+T_1.2 ;
+    %jmp T_1.0;
+T_1.1 ;
+    %end;
+    .thread T_1;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "bothside_tb.v";
+    "./bothside.v";

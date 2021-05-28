@@ -1,0 +1,342 @@
+$date
+	Fri May 14 19:49:15 2021
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module lifo_tb $end
+$var wire 8 ! read_data [7:0] $end
+$var wire 1 " full $end
+$var wire 1 # error $end
+$var wire 1 $ empty $end
+$var reg 1 % clk $end
+$var reg 1 & read_write_bar $end
+$var reg 1 ' rst $end
+$var reg 8 ( write_data [7:0] $end
+$var integer 32 ) i [31:0] $end
+$scope module dut $end
+$var wire 1 % clk $end
+$var wire 1 & read_write_bar $end
+$var wire 1 ' rst $end
+$var wire 8 * write_data [7:0] $end
+$var wire 1 " full $end
+$var wire 1 # error $end
+$var wire 1 $ empty $end
+$var reg 4 + addr [3:0] $end
+$var reg 8 , read_data [7:0] $end
+$scope begin read $end
+$upscope $end
+$scope begin write $end
+$upscope $end
+$upscope $end
+$scope task read $end
+$upscope $end
+$scope task reset $end
+$upscope $end
+$scope task write $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+bx ,
+bx +
+bx *
+bx )
+bx (
+x'
+x&
+0%
+x$
+x#
+x"
+bx !
+$end
+#5
+1%
+#10
+1'
+0%
+#15
+0"
+1$
+b0 +
+1%
+#20
+b0 (
+b0 *
+0#
+0&
+b0 )
+0'
+0%
+#25
+0$
+b1 +
+b1 (
+b1 *
+b1 )
+1%
+#30
+0%
+#35
+b10 +
+b10 (
+b10 *
+b10 )
+1%
+#40
+0%
+#45
+b11 +
+b11 (
+b11 *
+b11 )
+1%
+#50
+0%
+#55
+b100 +
+b100 (
+b100 *
+b100 )
+1%
+#60
+0%
+#65
+b101 +
+b101 (
+b101 *
+b101 )
+1%
+#70
+0%
+#75
+b110 +
+b110 (
+b110 *
+b110 )
+1%
+#80
+0%
+#85
+b111 +
+b111 (
+b111 *
+b111 )
+1%
+#90
+0%
+#95
+b1000 +
+b1000 (
+b1000 *
+b1000 )
+1%
+#100
+0%
+#105
+b1001 +
+b1001 (
+b1001 *
+b1001 )
+1%
+#110
+0%
+#115
+b1010 +
+b1010 (
+b1010 *
+b1010 )
+1%
+#120
+0%
+#125
+b1011 +
+b1011 (
+b1011 *
+b1011 )
+1%
+#130
+0%
+#135
+b1100 +
+b1100 (
+b1100 *
+b1100 )
+1%
+#140
+0%
+#145
+b1101 +
+b1101 (
+b1101 *
+b1101 )
+1%
+#150
+0%
+#155
+b1110 +
+b1110 (
+b1110 *
+b1110 )
+1%
+#160
+0%
+#165
+1#
+1"
+b1111 +
+b1111 )
+1%
+#170
+0%
+#175
+0#
+1&
+1%
+#180
+0%
+#185
+0"
+b1110 +
+1%
+#190
+0%
+#195
+b1101 +
+b1110 !
+b1110 ,
+1%
+#200
+0%
+#205
+b1100 +
+b1101 !
+b1101 ,
+1%
+#210
+0%
+#215
+b1011 +
+b1100 !
+b1100 ,
+1%
+#220
+0%
+#225
+b1010 +
+b1011 !
+b1011 ,
+1%
+#230
+0%
+#235
+b1001 +
+b1010 !
+b1010 ,
+1%
+#240
+0%
+#245
+b1000 +
+b1001 !
+b1001 ,
+1%
+#250
+0%
+#255
+b111 +
+b1000 !
+b1000 ,
+1%
+#260
+0%
+#265
+b110 +
+b111 !
+b111 ,
+1%
+#270
+0%
+#275
+b101 +
+b110 !
+b110 ,
+1%
+#280
+0%
+#285
+b100 +
+b101 !
+b101 ,
+1%
+#290
+0%
+#295
+b11 +
+b100 !
+b100 ,
+1%
+#300
+0%
+#305
+b10 +
+b11 !
+b11 ,
+1%
+#310
+0%
+#315
+b1 +
+b10 !
+b10 ,
+1%
+#320
+0%
+#325
+1#
+1$
+b0 +
+b1 !
+b1 ,
+1%
+#330
+0%
+#335
+1%
+#340
+0%
+#345
+1%
+#350
+0%
+#355
+1%
+#360
+0%
+#365
+1%
+#370
+0%
+#375
+1%
+#380
+0%
+#385
+1%
+#390
+0%
+#395
+1%
+#400
+0%
+#405
+1%
+#410
+0%
+#415
+1%
